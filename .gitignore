@@ -1,0 +1,48 @@
+# 构建目录
+build/
+*/build/
+cmake-build-*/
+
+# 暂时屏蔽文档文件，后续根据需要调整
+*.md
+
+# 编译产物
+*.exe
+*.exe.manifest
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+*.o
+*.obj
+*.out
+*.app
+
+# CMake 生成文件
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+compile_commands.json     # 虽然是 clangd 需要，但应由 CMake 生成，不提交
+
+# clangd 索引缓存
+.clangd/
+.clangd/
+
+# VSCode 配置（如果团队统一可提交 .vscode/ 但排除个人文件）
+.vscode/.clang-format
+.vscode/c_cpp_properties.json
+
+# 编辑器临时文件
+*~
+*.swp
+*.swo
+*.swn
+.DS_Store
+Thumbs.db
+
+# 日志与转储
+*.log
+*.dmp
+core

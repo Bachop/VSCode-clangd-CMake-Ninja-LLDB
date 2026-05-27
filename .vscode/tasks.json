@@ -1,0 +1,34 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "CMake Build",
+            "command": "cmake",
+            "args": [
+                "-B", "build",           // 构建目录
+                "-S", ".",               // 源码目录
+                "-DCMAKE_BUILD_TYPE=Debug",
+                "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"   // 为 clangd 生成 compile_commands.json
+            ],
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "type": "shell",
+            "label": "cmake-build",
+            "command": "cmake",
+            "args": [
+                "--build", "build",
+                "--config", "Debug",
+                "-j", "4"                             // 并行编译
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "dependsOn": ["CMake Build"],    // 构建前自动配置
+            "problemMatcher": ["$msCompile"]    // 使用 MSVC 编译器的错误匹配器，适用于 Windows
+        }
+    ]
+}

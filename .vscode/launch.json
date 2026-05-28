@@ -5,7 +5,7 @@
             "name": "Debug with LLDB",
             "type": "lldb",
             "request": "launch",
-            "program": "${workspaceFolder}/build/room2_exe.exe",
+            "program": "${workspaceFolder}/build/room2.exe",
             "args": [],
             "cwd": "${workspaceFolder}",
             "preLaunchTask": "CMake Build",

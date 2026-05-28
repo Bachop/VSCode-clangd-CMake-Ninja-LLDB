@@ -1,11 +1,12 @@
 {
     "clangd.arguments": [
         "--compile-commands-dir=build",
+        "--query-driver=D:/msys64/ucrt64/bin/cc.exe",
         "--query-driver=D:/msys64/ucrt64/bin/c++.exe",
         "--background-index",
         "--clang-tidy",
         "--header-insertion=iwyu"
     ],
 
-    "clangd.path": "D:\\LLVM\\bin\\clangd.exe"
+    "clangd.path": "D:/msys64/ucrt64/bin/clangd.exe"
 }

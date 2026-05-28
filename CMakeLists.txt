@@ -1,11 +1,17 @@
 cmake_minimum_required(VERSION 3.10)
-project(TestProject CXX)
+project(room2 LANGUAGES C CXX)
 
+set(CMAKE_C_STANDARD 99)
+set(CMAKE_C_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(SOURCES
-    main.cpp
+    ./src/main.cpp
+    ./src/room2.c
 )
 
-add_executable(room2_exe ${SOURCES})
+add_executable(room2 ${SOURCES})
+
+target_include_directories(room2 PRIVATE include)
+

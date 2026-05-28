@@ -6,8 +6,9 @@
             "label": "CMake Build",
             "command": "cmake",
             "args": [
-                "-B", "build",           // 构建目录
-                "-S", ".",               // 源码目录
+                "-B", "build",                    // 构建目录
+                "-S", ".",                        // 源码目录
+                "-G", "Ninja",                    // 使用 Ninja 生成器
                 "-DCMAKE_BUILD_TYPE=Debug",
                 "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"   // 为 clangd 生成 compile_commands.json
             ],

@@ -3,33 +3,35 @@
     "tasks": [
         {
             "type": "shell",
-            "label": "CMake Build",
+            "label": "CMake Configure",
             "command": "cmake",
             "args": [
-                "-B", "build",                    // 构建目录
-                "-S", ".",                        // 源码目录
-                "-G", "Ninja",                    // 使用 Ninja 生成器
+                "-B", "build",
+                "-S", ".",
+                "-G", "Ninja",
                 "-DCMAKE_BUILD_TYPE=Debug",
-                "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"   // 为 clangd 生成 compile_commands.json
+                "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+                "-DCMAKE_C_COMPILER=D:/msys64/ucrt64/bin/clang.exe",
+                "-DCMAKE_CXX_COMPILER=D:/msys64/ucrt64/bin/clang++.exe"
             ],
             "group": "build",
             "problemMatcher": []
         },
         {
             "type": "shell",
-            "label": "cmake-build",
+            "label": "CMake Build",
             "command": "cmake",
             "args": [
                 "--build", "build",
                 "--config", "Debug",
-                "-j", "4"                             // 并行编译
+                "-j", "4"
             ],
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
-            "dependsOn": ["CMake Build"],    // 构建前自动配置
-            "problemMatcher": ["$msCompile"]    // 使用 MSVC 编译器的错误匹配器，适用于 Windows
+            "dependsOn": ["CMake Configure"],
+            "problemMatcher": ["$msCompile"]
         }
     ]
 }

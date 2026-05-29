@@ -8,7 +8,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(SOURCES
     ./src/main.cpp
-    ./src/room2.c
 )
 
 add_executable(room2 ${SOURCES})

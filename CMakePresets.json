@@ -9,7 +9,9 @@
             "binaryDir": "${sourceDir}/build/${presetName}",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug",
-                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+                "CMAKE_C_COMPILER": "D:/msys64/ucrt64/bin/clang.exe",
+                "CMAKE_CXX_COMPILER": "D:/msys64/ucrt64/bin/clang++.exe"
             }
         },
         {
@@ -20,7 +22,9 @@
             "binaryDir": "${sourceDir}/build/${presetName}",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Release",
-                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+                "CMAKE_C_COMPILER": "D:/msys64/ucrt64/bin/clang.exe",
+                "CMAKE_CXX_COMPILER": "D:/msys64/ucrt64/bin/clang++.exe"
             }
         }
     ],

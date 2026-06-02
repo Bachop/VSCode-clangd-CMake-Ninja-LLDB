@@ -3,9 +3,6 @@ build/
 */build/
 cmake-build-*/
 
-# 暂时屏蔽文档文件，后续根据需要调整
-*.md
-
 # 编译产物
 *.exe
 *.exe.manifest
